@@ -1,34 +1,62 @@
-/*We introduced you to a few common built-in methods, but there are many more out there! Now’s a good time to practice your documentation search skills. Take a moment to look up the following built-in methods to understand their usage:
-
-Math.Pow()
-Math.Max()
-Math.Ceiling() */
-
 using System;
+using System.ComponentModel;
+using System.Linq;
 
-namespace DocumentationHunt
+namespace PasswordChecker
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
+        public static void Main(string[] args)
+        {// define vars
 
-      double numberOne = 6.5;
-      double numberTwo = 4;
-
-      // Raise numberOne to the numberTwo power
-      Console.WriteLine(Math.Pow(numberOne,numberTwo));
-
-      // Round numberOne up
-      Console.WriteLine(Math.Round(numberOne));
-
-      // Find the larger number between numberOne and numberTwo
-     
- Console.WriteLine(Math.Ceiling(numberOne));
-
-   Console.WriteLine(Math.Ceiling(Math.Max(numberOne,numberTwo)));
+            int minLength = 5;
+            string uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string lowercase = "abcdefghijklmnopqrstuvwxyz";
+            string digits = "0123456789";
+            string specialChars = "!@#$%^&*()-_=+[]{}|;:'\",.<>?/\\";
+            int score = 0;
 
 
-    }
-  }
-}
+            //ask user to set a password 
+            Console.Write("Enter a password: ");
+            string password = Console.ReadLine();
+
+
+            //make sure the minimum of chars is 5
+            if (password.Length >= minLength)
+            {
+                Console.WriteLine($"password is: {password} and it has {password.Length} letters");
+            }
+            else
+            {
+                Console.WriteLine($"pass too short, you only have {password.Length} letters");
+            }
+
+            //go through each char and check it has all the above variables
+            //set ranks the pass containing all initialized chars.
+
+            for (int i = 0; i < password.Length; i++)
+            {
+                if (password.Contains(digits) && password.Contains(specialChars) && password.Contains(lowercase) && password.Contains(uppercase)) //@kazachusS22#
+                {
+                    Console.WriteLine("Strong");
+                }
+                else if (!password.Contains(digits))//password.Contains(uppercase),password.Contains(specialChars)) //
+                {
+                    Console.WriteLine("Medium...try again");
+                }
+
+                else
+                {
+                    Console.WriteLine("weak");
+                }             
+             }
+
+
+          ps:
+          /*
+          set the password min length
+          set the variables          
+          go through each caharacter of the password
+          set conditions with points of strength of password depending if has all chars !Qa2
+          */
