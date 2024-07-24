@@ -16,12 +16,12 @@ namespace ConsoleApp49
                 foreach (string i in name)
                 {
                 //print the names 
-                //Console.WriteLine(i);
+                Console.WriteLine(i);
                 //extract first names
-                //Console.WriteLine(i.Split(' ')[0]);
-                Console.WriteLine(i.Split(' ')[1]);  //version1
+                Console.WriteLine(i.Split(' ')[0]);
+                Console.WriteLine(i.Split(' ')[1]);  
                 // extract ln              
-                //Console.WriteLine(i.Substring(i.IndexOf(' '))); //v2
+                Console.WriteLine(i.Substring(i.IndexOf(' ')));
               
             }
 
