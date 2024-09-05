@@ -1,6 +1,8 @@
 using System;
 using Npgsql;  // Use Npgsql for PostgreSQL
 
+//--am facut joinul in sql apoi l-am inserat in .net scprip and ran it on console.
+
 namespace Chinno
 {
     public class Kino
@@ -69,3 +71,4 @@ namespace Chinno
         }
     }
 }
+//--am facut joinul in sql apoi l-am inserat in .net scprip and ran it on console.
