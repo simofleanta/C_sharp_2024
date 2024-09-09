@@ -1,8 +1,13 @@
 imi da totate 
 
-`select * from company c 
-inner join persons p on p.person_id = c.company_id `
+`select a.artist_id ArtistID_From_Artist,
+b.artist_id ArtistID_From_Album,
+a."name" artistname,
+b.title albumtitle
+from artist a
+inner join album b on a.artist_id =b.artist_id  `
 
 
-![image](https://github.com/user-attachments/assets/7477c1ce-9bf7-4489-8118-8eeb6fce6a0e)
+![image](https://github.com/user-attachments/assets/a5d45fdc-ce7c-4f6e-8799-756d0a1dc751)
+
 
