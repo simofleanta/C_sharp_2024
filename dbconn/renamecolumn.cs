@@ -26,12 +26,12 @@ namespace Chinno
                     Console.WriteLine("Connection successful!");
 
                     // Set all values in 'new_column' to NULL
-                    string updateQuery = @"
+                    string renameQuery = @"
                          ALTER TABLE artist 
                         RENAME COLUMN new_column TO musical_intrument;
                     ";
 
-                    using (var command = new NpgsqlCommand(updateQuery, connection))
+                    using (var command = new NpgsqlCommand(renameQuery, connection))
                     {
                         int rowsAffected = command.ExecuteNonQuery();
                         Console.WriteLine($"{rowsAffected} row(s) updated successfully.");
